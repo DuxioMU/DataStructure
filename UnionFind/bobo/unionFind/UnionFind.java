@@ -4,7 +4,7 @@ public class UnionFind {
 	
 	private int count;
 	private int[] id;
-	UnionFind(int n){
+	public UnionFind(int n){
 		this.count = n;
 		id = new int[n];
 		for(int i = 0; i < n; i++) {
@@ -17,13 +17,13 @@ public class UnionFind {
 		return id[p];
 	}
 	
-	//ÅÐ¶ÏÁ½¸öÊýÊÇ·ñÔÚÍ¬Ò»¸ö¼¯ºÏ
+	//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public boolean isConnected(int p,int q) {
 		return find(p) == find(q);
 	}
 	
-	//½«ÕûÊýqºÏ²¢µ½ÕûÊýpËùÔÚµÄ¼¯ºÏ
-	void unionElements(int p ,int q) {
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½qï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ÚµÄ¼ï¿½ï¿½ï¿½
+	public void unionElements(int p ,int q) {
 		
 		int pID = find(p);
 		int qID = find(q);
